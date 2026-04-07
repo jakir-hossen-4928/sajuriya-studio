@@ -1,0 +1,36 @@
+# robots.txt for studio.sajuriya.com
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+
+# Allow Google bots to crawl everything
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Block admin and private areas
+Disallow: /admin/
+Disallow: /admin/sync/
+Disallow: /private/
+Disallow: /api/
+
+# Block sensitive file types
+Disallow: /*.json$
+Disallow: /*.env$
+
+# Allow important pages to be crawled
+Allow: /about
+Allow: /privacy-policy
+Allow: /app/
+
+# Sitemap location
+Sitemap: https://studio.sajuriya.com/sitemap.xml
+
+# Crawl-delay for polite crawling (optional)
+Crawl-delay: 1
