@@ -2,7 +2,7 @@ import { collection, getDocs, doc, setDoc, deleteDoc, query, orderBy } from "fir
 import { db } from "@/lib/firebase";
 import type { AppData, BackendApp, BackendResponse } from "@/types/app";
 
-const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "https://sajuriya-studio-backend.vercel.app";
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
 // Fetch apps from Firestore
 export async function getApps(): Promise<AppData[]> {

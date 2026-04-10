@@ -9,9 +9,14 @@ import Index from "./pages/Index";
 import AppDetail from "./pages/AppDetail";
 import AdminDashboard from "./pages/AdminDashboard";
 import SyncPage from "./pages/SyncPage";
+import AdminAddApp from "./pages/AdminAddApp";
+import AdminFetchApp from "./pages/AdminFetchApp";
 import About from "./pages/About";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import NotFound from "./pages/NotFound";
+import { AdminLayout } from "./components/AdminLayout";
+import ScrollToTop from "./components/ScrollToTop";
+import { ScrollToTopButton } from "./components/ScrollToTopButton";
 
 const queryClient = new QueryClient();
 
@@ -22,17 +27,23 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <ScrollToTop />
           <AuthProvider>
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/about" element={<About />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/app/:packageName" element={<AppDetail />} />
-              <Route path="/admin" element={<AdminDashboard />} />
-              <Route path="/admin/sync" element={<SyncPage />} />
+              <Route path="/admin" element={<AdminLayout />}>
+                <Route index element={<AdminDashboard />} />
+                <Route path="sync" element={<SyncPage />} />
+                <Route path="add" element={<AdminAddApp />} />
+                <Route path="fetch" element={<AdminFetchApp />} />
+              </Route>
               <Route path="*" element={<NotFound />} />
             </Routes>
           </AuthProvider>
+          <ScrollToTopButton />
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>

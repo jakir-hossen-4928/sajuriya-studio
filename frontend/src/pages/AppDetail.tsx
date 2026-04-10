@@ -200,24 +200,25 @@ export default function AppDetail() {
                     screenshotErrors[i] ? (
                       <div
                         key={i}
-                        className="h-80 w-[180px] rounded-xl border border-white/[0.06] bg-white/[0.05] flex-shrink-0 flex items-center justify-center"
+                        className="h-96 min-w-[200px] rounded-xl border border-white/[0.06] bg-white/[0.05] flex-shrink-0 flex items-center justify-center"
                       >
                         <Image className="h-12 w-12 text-muted-foreground/50" />
                       </div>
                     ) : (
-                      <img
-                        key={i}
-                        src={src.trim()}
-                        alt={`${app.title} screenshot ${i + 1}`}
-                        className="h-80 w-[180px] rounded-xl border border-white/[0.06] flex-shrink-0 object-cover bg-white/[0.05]"
-                        loading="lazy"
-                        referrerPolicy="no-referrer"
-                        crossOrigin="anonymous"
-                        onError={(e) => {
-                          console.error(`Failed to load screenshot ${i + 1}:`, src);
-                          setScreenshotErrors((prev) => ({ ...prev, [i]: true }));
-                        }}
-                      />
+                      <div key={i} className="h-96 min-w-[180px] rounded-xl border border-white/[0.06] bg-white/[0.02] flex-shrink-0 overflow-hidden flex items-center justify-center">
+                        <img
+                          src={src.trim()}
+                          alt={`${app.title} screenshot ${i + 1}`}
+                          className="h-full w-full object-contain"
+                          loading="lazy"
+                          referrerPolicy="no-referrer"
+                          crossOrigin="anonymous"
+                          onError={(e) => {
+                            console.error(`Failed to load screenshot ${i + 1}:`, src);
+                            setScreenshotErrors((prev) => ({ ...prev, [i]: true }));
+                          }}
+                        />
+                      </div>
                     )
                   ))}
                 </div>

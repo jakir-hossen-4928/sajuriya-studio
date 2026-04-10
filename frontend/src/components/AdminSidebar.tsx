@@ -40,6 +40,12 @@ export function AdminSidebar({ onAction }: AdminSidebarProps) {
           <SidebarGroupContent>
             <SidebarMenu>
               <SidebarMenuItem>
+                <SidebarMenuButton onClick={() => navigate("/admin")} tooltip="Admin Dashboard">
+                  <LayoutDashboard className="h-4 w-4" />
+                  <span>Dashboard</span>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
+              <SidebarMenuItem>
                 <SidebarMenuButton onClick={() => navigate("/admin/sync")} tooltip="Sync from Play Store">
                   <RefreshCw className="h-4 w-4" />
                   <span>Sync from Play Store</span>

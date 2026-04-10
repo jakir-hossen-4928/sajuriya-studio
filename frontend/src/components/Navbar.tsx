@@ -34,6 +34,9 @@ export function Navbar() {
             <Link to="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               About
             </Link>
+            <Link to="/privacy-policy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              Privacy
+            </Link>
             <a
               href="https://play.google.com/store/apps/dev?id=6495908705399463745"
               target="_blank"

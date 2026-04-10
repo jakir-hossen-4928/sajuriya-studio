@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Home, Info, ExternalLink, LogIn, LogOut, LayoutDashboard } from "lucide-react";
+import { Home, Info, Shield, ExternalLink, LogIn, LogOut, LayoutDashboard } from "lucide-react";
 import { useAuth } from "@/contexts/AuthContext";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
@@ -14,6 +14,7 @@ const LOGO = "/sajuriya-logo.png";
 const navItems = [
   { title: "Apps", url: "/", icon: Home },
   { title: "About", url: "/about", icon: Info },
+  { title: "Privacy", url: "/privacy-policy", icon: Shield },
 ];
 
 export function MobileSidebar({ open, onOpenChange }: MobileSidebarProps) {
