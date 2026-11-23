@@ -6,7 +6,6 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import heroCoverMobile from "@/assets/hero-cover.jpg";
 import heroCoverDesktop from "@/assets/desktop-hero-cover.png";
-import developerBanner from "@/assets/developer-jakir-promotional-banner.png";
 
 export default function About() {
   return (
@@ -80,25 +79,6 @@ export default function About() {
           </div>
         </section> */}
 
-        {/* Developer Promotion Banner */}
-        <section className="py-8">
-          <div className="container max-w-5xl">
-            <motion.div
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="glass-card p-4 md:p-6 rounded-2xl overflow-hidden"
-            >
-              <img
-                src={developerBanner}
-                alt="Developer Jakir - Promotional Banner"
-                className="w-full h-auto rounded-xl shadow-2xl"
-                loading="lazy"
-              />
-            </motion.div>
-          </div>
-        </section>
-
         {/* Info section */}
         <section className="py-16 md:py-24">
           <div className="container max-w-4xl">
@@ -166,6 +146,20 @@ export default function About() {
                         className="text-sm text-foreground/80 hover:text-primary transition-colors"
                       >
                         mdjakirkhan4928@gmail.com
+                      </a>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <ExternalLink className="h-4 w-4 text-primary shrink-0" />
+                    <div>
+                      <p className="text-xs font-mono tracking-widest text-muted-foreground mb-1">WEBSITE</p>
+                      <a
+                        href="https://jakirhossen.xyz"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-foreground/80 hover:text-primary transition-colors"
+                      >
+                        jakirhossen.xyz
                       </a>
                     </div>
                   </div>
