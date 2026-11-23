@@ -138,6 +138,18 @@ export default function About() {
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
+                    <Phone className="h-4 w-4 text-primary shrink-0" />
+                    <div>
+                      <p className="text-xs font-mono tracking-widest text-muted-foreground mb-1">SAUDI ARABIA</p>
+                      <a
+                        href="tel:+966572205093"
+                        className="text-sm text-foreground/80 hover:text-primary transition-colors"
+                      >
+                        +966 57 220 5093
+                      </a>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
                     <Mail className="h-4 w-4 text-primary shrink-0" />
                     <div>
                       <p className="text-xs font-mono tracking-widest text-muted-foreground mb-1">EMAIL</p>
